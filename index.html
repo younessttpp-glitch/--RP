@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PREM RP | الموقع الرسمي</title>
+
+  <meta
+    name="description"
+    content="PREM RP - الموقع الرسمي. مرحباً بك في PREM RP."
+  >
+
+  <meta
+    name="keywords"
+    content="PREM RP, PREMRP, PREM RP Server, PREM RP سيرفر"
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#090909">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background:
+        radial-gradient(circle at center, #1b0624 0%, #090909 55%, #000000 100%);
+
+      font-family: Arial, Tahoma, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 35px;
+
+      text-shadow:
+        0 0 10px rgba(170, 0, 255, 0.7),
+        0 0 30px rgba(170, 0, 255, 0.4);
+    }
+
+    .rp-button {
+      display: inline-block;
+
+      padding: 18px 65px;
+
+      font-size: 24px;
+      font-weight: bold;
+
+      color: white;
+      background: #111111;
+
+      border: 2px solid #a000ff;
+      border-radius: 12px;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 0 10px rgba(160, 0, 255, 0.4);
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .rp-button:hover {
+      transform: scale(1.07);
+
+      background: #a000ff;
+
+      box-shadow:
+        0 0 15px #a000ff,
+        0 0 40px rgba(160, 0, 255, 0.7);
+    }
+
+    .rp-button:active {
+      transform: scale(0.98);
+    }
+
+    .message {
+      margin-top: 25px;
+
+      font-size: 18px;
+      color: #cccccc;
+
+      opacity: 0;
+      transform: translateY(10px);
+
+      transition: 0.3s ease;
+    }
+
+    .message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 18px;
+      width: 100%;
+
+      text-align: center;
+
+      font-size: 13px;
+      color: #666666;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 36px;
+      }
+
+      .rp-button {
+        padding: 16px 45px;
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1 class="title">PREM RP</h1>
+
+    <button
+      class="rp-button"
+      onclick="showMessage()"
+      aria-label="PREM RP"
+    >
+      PREM RP
+    </button>
+
+    <p id="message" class="message">
+      مرحباً بك في PREM RP 👋
+    </p>
+
+  </main>
+
+  <footer class="footer">
+    © 2026 PREM RP
+  </footer>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById("message");
+
+      message.classList.add("show");
+    }
+  </script>
+
+</body>
+</html>
+
